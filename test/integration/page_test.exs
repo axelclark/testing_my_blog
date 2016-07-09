@@ -2,8 +2,11 @@ defmodule TestingMyBlog.PageTest do
   use TestingMyBlog.AcceptanceCase, async: true
 
   test "home page", %{session: session} do
-    visit(session, "/")
+    page = 
+      session
+      |> visit("/")
+      |> find(".jumbotron")
 
-    assert has_text?(session, "Welcome to Phoenix!")
+    assert has_text?(page, "Welcome to Phoenix!")
   end
 end
