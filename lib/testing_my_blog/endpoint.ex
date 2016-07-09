@@ -19,6 +19,10 @@ defmodule TestingMyBlog.Endpoint do
     plug Phoenix.CodeReloader
   end
 
+  if Application.get_env(:testing_my_blog, :sql_sandbox) do
+    plug Phoenix.Ecto.SQL.Sandbox
+  end
+
   plug Plug.RequestId
   plug Plug.Logger
 

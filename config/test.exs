@@ -17,3 +17,10 @@ config :testing_my_blog, TestingMyBlog.Repo,
   database: "testing_my_blog_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
+
+  
+# Make sure Phoenix is setup to serve endpoints
+config :testing_my_blog, TestingMyBlog.Endpoint,
+  server: true
+
+config :testing_my_blog, :sql_sandbox, true
