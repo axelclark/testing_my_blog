@@ -27,6 +27,8 @@ defmodule TestingMyBlog.ConnCase do
 
       import TestingMyBlog.Router.Helpers
 
+      import TestingMyBlog.Factory
+
       # The default endpoint for testing
       @endpoint TestingMyBlog.Endpoint
     end
